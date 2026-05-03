@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.hero {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    color: white;
+    border-radius: 0 0 30px 30px;
+}
+
+.card {
+    border-radius: 16px;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #212529;
+    color: white;
+    text-align: center;
+}
+
+.profile-img {
+    max-width: 260px;
+    border-radius: 20px;
+}
+
+.slider-img {
+    height: 420px;
+    object-fit: cover;
+}
+
+.error {
+    color: #dc3545;
+    font-size: 14px;
+}
+
+.success-box {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
