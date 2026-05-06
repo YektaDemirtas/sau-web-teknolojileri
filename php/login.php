@@ -1,4 +1,5 @@
 <?php
+
 $email = $_POST["email"] ?? "";
 $password = $_POST["password"] ?? "";
 
@@ -7,7 +8,7 @@ $correctEmail = $studentNo . "@sakarya.edu.tr";
 $correctPassword = $studentNo;
 
 if (empty($email) || empty($password)) {
-    header("Location: ../login.html");
+    header("Location: ../login.html?error=empty");
     exit;
 }
 
@@ -25,7 +26,8 @@ if ($email === $correctEmail && $password === $correctPassword) {
     echo "<a href='../index.html' class='btn btn-primary'>Ana Sayfa</a>";
     echo "</body></html>";
 } else {
-    header("Location: ../login.html");
+    header("Location: ../login.html?error=wrong");
     exit;
 }
+
 ?>

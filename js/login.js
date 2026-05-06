@@ -3,7 +3,7 @@ function validateLogin() {
     const password = document.getElementById("loginPassword").value.trim();
     const errorArea = document.getElementById("loginError");
 
-    const emailPattern = /^b[0-9]{10}@sakarya\.edu\.tr$/;
+    const emailPattern = /^b[0-9]{9}@sakarya\.edu\.tr$/;
 
     if (email === "" || password === "") {
         errorArea.innerHTML = "E-posta ve şifre boş bırakılamaz.";
@@ -11,9 +11,25 @@ function validateLogin() {
     }
 
     if (!emailPattern.test(email)) {
-        errorArea.innerHTML = "E-posta formatı b0000000000@sakarya.edu.tr şeklinde olmalıdır.";
+        errorArea.innerHTML = "E-posta formatı b123456789@sakarya.edu.tr şeklinde olmalıdır.";
         return false;
     }
 
     return true;
 }
+
+window.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get("error");
+    const errorArea = document.getElementById("loginError");
+
+    if (!errorArea) {
+        return;
+    }
+
+    if (error === "empty") {
+        errorArea.innerHTML = "E-posta ve şifre boş bırakılamaz.";
+    } else if (error === "wrong") {
+        errorArea.innerHTML = "E-posta veya şifre hatalı.";
+    }
+});
