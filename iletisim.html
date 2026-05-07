@@ -31,10 +31,10 @@
 </nav>
 
 
-<main class="container mt-5" id="contactApp">
+<main class="container mt-5" id="contactApp" v-cloak>
   <h1>İletişim</h1>
 
-  <form id="contactForm" action="php/form.php" method="POST" novalidate>
+  <form id="contactForm" action="php/iletisim_form.php" method="POST" novalidate>
     <div class="mb-3">
       <label class="form-label">Ad Soyad</label>
       <input type="text" name="name" id="name" v-model="form.name" class="form-control">

@@ -47,3 +47,7 @@ footer {
     background-color: #d1e7dd;
     color: #0f5132;
 }
+
+[v-cloak] {
+    display: none;
+}
